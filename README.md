@@ -1,10 +1,10 @@
-# DEV → X Article Automation
+# X Article Automation
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)
 ![Status](https://img.shields.io/badge/status-in--development-yellow)
 
-**Automated pipeline that fetches developer articles from DEV, summarizes them via LLM, and publishes daily posts to X.**
+**Automated pipeline that fetches developer articles from DEV, summarizes them via LLM and publishes daily posts to X.**
 
 ---
 
@@ -28,7 +28,7 @@
 
 Developer content is abundant. Distribution is not.
 
-This service reduces long-form DEV articles into short, compliant posts suitable for X, while respecting API constraints, rate limits, and operational safety.
+This service reduces long form DEV articles into short, compliant posts suitable for X, while respecting API constraints, rate limits, and operational safety.
 
 **Key Objectives:**
 
@@ -101,7 +101,7 @@ flowchart LR
 | Stage      | Description                                      |
 |------------|--------------------------------------------------|
 | **Fetch**  | Pull articles from DEV API (open/authenticated) |
-| **Summarize** | LLM generates X-compatible summary           |
+| **Summarize** | LLM generates X compatible summary           |
 | **Persist** | (Optional) Store article + summary in MongoDB  |
 | **Rate Gate** | Enforce daily post limit                     |
 | **Publish** | Post summary to X                              |
@@ -125,7 +125,7 @@ flowchart LR
 |-----|-------|---------------|
 | **DEV / Forem API** | Fetch developer articles | [docs.forem.com](https://developers.forem.com/api) |
 | **X API** | Publish posts to X (Twitter) | [developer.x.com](https://developer.x.com/en/docs) |
-| **LLM Provider** | Generate article summaries (provider-agnostic) | — |
+| **LLM Provider** | Generate article summaries (provider agnostic) | — |
 
 ---
 
@@ -200,7 +200,7 @@ PORT=3000
 ## Features
 
 - **Article Fetching** — Pull latest articles from DEV API
-- **LLM Summarization** — Generate concise, X-compatible summaries
+- **LLM Summarization** — Generate concise, X compatible summaries
 - **Rate Limiting** — Strict 1 post per 24h enforcement
 - **Deduplication** — Prevent reposting of processed articles
 - **Retry Logic** — Handle transient failures gracefully
@@ -232,6 +232,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 **ajaj**
 
 - GitHub: [@ajajm](https://github.com/ajajm)
+- Website: [ajaj.dev](https://ajaj.dev)
 
 ---
 
