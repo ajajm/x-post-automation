@@ -1,0 +1,19 @@
+{
+  "name": "x-post-automation",
+  "version": "1.0.0",
+  "description": "This system automatically fetches developer articles, summarizes them using an LLM and posts concise updates to X",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajajm/x-post-automation.git"
+  },
+  "author": "ajaj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajajm/x-post-automation/issues"
+  },
+  "homepage": "https://github.com/ajajm/x-post-automation#readme"
+}
