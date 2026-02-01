@@ -2,8 +2,11 @@
   "name": "x-post-automation",
   "version": "1.0.0",
   "description": "This system automatically fetches developer articles, summarizes them using an LLM and posts concise updates to X",
+  "type": "module",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon -r dotenv/config src/server.js",
+    "start": "server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,15 @@
   "bugs": {
     "url": "https://github.com/ajajm/x-post-automation/issues"
   },
-  "homepage": "https://github.com/ajajm/x-post-automation#readme"
+  "homepage": "https://github.com/ajajm/x-post-automation#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
 }
