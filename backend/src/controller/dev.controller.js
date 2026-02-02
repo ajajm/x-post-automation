@@ -12,7 +12,7 @@
  * @throws {500} Internal server error if API request fails
  */
 
-const fetchArticleData = async(req, res) => {
+const fetchArticleData = async (req, res) => {
     try {
         // Make authenticated request to DEV API for specific article
         // Article ID is hardcoded for now - should be dynamic via req.params
@@ -24,15 +24,23 @@ const fetchArticleData = async(req, res) => {
         const article = await response.json()
 
         // Return only required fields to minimize payload size
-        res.status(200).json({
-            title: article.title, 
+        const payload = {
+            title: article.title,
             body_html: article.body_html
-        });
+        };
+
+        if (res) {
+            res.status(200).json(payload);
+        }
+
+        return payload;
 
     } catch (error) {
         // Log error for debugging and return user-friendly message
         console.error("Error fetching article data:", error);
-        res.status(500).json({ error: error.message })
+        if (res) {
+            res.status(500).json({ error: error.message });
+        }
     }
 }
 
